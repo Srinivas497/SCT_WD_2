@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Stopwatch</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="stopwatch-container">
+    <h1 class="title">Stopwatch</h1>
+
+    <div class="time-display" id="timeDisplay">00:00:00.00</div>
+
+    <div class="controls">
+      <button class="btn start-btn" id="startBtn">Start</button>
+      <button class="btn pause-btn" id="pauseBtn" disabled>Pause</button>
+      <button class="btn lap-btn" id="lapBtn" disabled>Lap</button>
+      <button class="btn reset-btn" id="resetBtn">Reset</button>
+    </div>
+
+    <div class="lap-section">
+      <h3 class="lap-title">
+        Lap Times 
+        <span class="status-indicator stopped" id="statusIndicator"></span>
+      </h3>
+
+      <div class="stats" id="statsSection" style="display: none;">
+        <div class="stat-item">
+          <div class="stat-label">Total Laps</div>
+          <div class="stat-value" id="totalLaps">0</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Best Lap</div>
+          <div class="stat-value" id="bestLap">--:--:--.--</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Average Lap</div>
+          <div class="stat-value" id="avgLap">--:--:--.--</div>
+        </div>
+      </div>
+
+      <div class="lap-times" id="lapTimes">
+        <div style="text-align: center; color: #999; padding: 20px;">
+          No lap times recorded yet
+        </div>
+      </div>
+
+      <button class="btn clear-laps-btn" id="clearLapsBtn" style="display: none;">Clear Laps</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
